@@ -1,0 +1,13 @@
+If error occurs when adding webhook to github : 
+    
+    -add /github at the end of the webhook Url
+
+If error message is "./docker_run.bash: command not found" :
+
+    -give permission("rwxr-xr-x") to "docker_run.bash" & "run_tests.bash"
+
+If error message is "/var/run/docker.sock: connect: permission denied" :
+
+    pi@raspberrypi:~/WhenInStock
+    $ sudo chmod 666 /var/run/docker.sock
+   
