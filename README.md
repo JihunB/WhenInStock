@@ -140,11 +140,18 @@ If you are interested in configuring multiple alerters or would like to keep you
 - you get to choose which products you want to track
 - you are in control of the refresh frequency
 
+## Contribution
+
+- included more links to high demand products and rearranged them in the order of links most likely to be found  
+- due to the increased security of the Captcha, links that interrupt the 2-second refresh and slow down the program have been erased  
+- when the average market price fell, the price sought for each product was lowered  
+- the errors that occur frequently were organized and added to CheckError.txt file    
+
 ## Presentation Video (YouTube) Link
 
 
 
-## Where can people get more help, if needed?
+## Where can I get more help, if needed?
 
 Feel free to contact me for any reason via email 👍 : 22100344@handong.ac.kr
 
