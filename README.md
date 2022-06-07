@@ -13,7 +13,18 @@ You will also need one of the following:
 - [Telegram Webhook URL and Chat ID](https://core.telegram.org/bots/api)
 - [SMTP relay to send automated emails](https://medium.com/swlh/setting-up-gmail-and-other-email-on-a-raspberry-pi-6f7e3ad3d0e)
 
-## Quick Start
+
+## What does this project do?
+
+As the name suggests, this Open-source Software notifies you when a high demand product you wanted gets back in stock below specific price.  
+This script continually refreshes a set of URLs, looking for the "add to cart" phrase. Once detected, an automated alert is sent, giving you an opportunity to react.   
+The notification may be sent through the method desired by the user (Discord, Slack, Telegram, email).   
+  
+<img width="468" alt="Picture1" src="https://user-images.githubusercontent.com/91535297/172469099-ea0b9a63-e8a6-4249-8cb4-58427ec0cad5.png">
+
+
+
+## How to get started?
 
 Please test on Raspberry Pi OS with Docker already installed.
 
@@ -48,14 +59,7 @@ Please test on Raspberry Pi OS with Docker already installed.
     pi@raspberrypi:~/WhenInStock
     $ ./docker_run.bash -c ./config/newegg_rtx_3070.yaml -a discord -w https://discord.com/api/webhooks/...
     ```
-    *If error occurs such as "./docker_run.bash: command not found", give permission(ex."rwxr-xr-x") to "docker_run.bash" & "run_tests.bash"
     
-    *If error occurs like this: "/var/run/docker.sock: connect: permission denied",
-    
-    ```
-    pi@raspberrypi:~/WhenInStock
-    $ sudo chmod 666 /var/run/docker.sock
-    ```
     
     If using an SMTP relay, the format of your command will look like this:
 
@@ -67,7 +71,7 @@ Please test on Raspberry Pi OS with Docker already installed.
     $ ./docker_run.bash -c ./config/newegg_rtx_3070.yaml -e myemail@email.com -r 127.0.0.1
     ```
 
-## Getting New Code
+## How to stop and test other files?
 
 1. First identify any running container names related to WhenInStock
     ```
@@ -128,20 +132,19 @@ If you are interested in configuring multiple alerters or would like to keep you
     $ ./docker_run.bash -c ./config/newegg_rtx_3070.yaml -q ./config/alerters.yaml
     ```
 
-## How it works
 
-The general idea is if you can get notified as soon as a product becomes in stock, you might have a chance to purchase it before scalpers clear out inventory. This script continually refreshes a set of URLs, looking for the "add to cart" phrase. Once detected, an automated alert is sent, giving you an opportunity to react.
+## Why is this project useful?
 
-## FAQ
-
-### How is this different from existing online inventory trackers?
-
-Before developing inventory-hunter, I used several existing services without any luck. By the time I received an alert, the product had already been scalped. This bot alerts faster than existing trackers for several reasons:
-
+- you can buy high demand products anytime with least effort
 - it runs on your own hardware, so no processing time is spent servicing other users
 - you get to choose which products you want to track
 - you are in control of the refresh frequency
 
-### What if WhenInStock gets used by scalpers?
+## Presentation Video (YouTube) Link
 
-I sure hope this doesn't happen... 2020 and 2021 are bad enough already. My hope is that inventory-hunter levels the playing field a bit by giving real customers a better opportunity than they had previously. Serious scalpers will continue using automated checkout bots, and it is up to online retailers to combat this malarkey.
+
+
+## Where can people get more help, if needed?
+
+Feel free to contact me for any reason via email 👍 : 22100344@handong.ac.kr
+
