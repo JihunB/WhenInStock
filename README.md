@@ -17,7 +17,7 @@ You will also need one of the following:
 
 Please test on Raspberry Pi OS with Docker already installed.
 
-1. Clone this repository and pull the latest image from [Docker Hub](https://hub.docker.com/r/ericjmarti/inventory-hunter):
+1. Clone this repository and pull the latest image
     ```
     pi@raspberrypi:~
     $ git clone https://github.com/JihunB/WhenInStock
@@ -48,7 +48,15 @@ Please test on Raspberry Pi OS with Docker already installed.
     pi@raspberrypi:~/WhenInStock
     $ ./docker_run.bash -c ./config/newegg_rtx_3070.yaml -a discord -w https://discord.com/api/webhooks/...
     ```
-
+    *If error occurs such as "./docker_run.bash: command not found", give permission(ex."rwxr-xr-x") to "docker_run.bash" & "run_tests.bash"
+    
+    *If error occurs like this: "/var/run/docker.sock: connect: permission denied",
+    
+    ```
+    pi@raspberrypi:~/WhenInStock
+    $ sudo chmod 666 /var/run/docker.sock
+    ```
+    
     If using an SMTP relay, the format of your command will look like this:
 
     ```
