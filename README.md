@@ -1,6 +1,6 @@
 # WhenInStock
 
-![Build](https://github.com/JihunB/WhenInStock/workflows/Build/badge.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/ericjmarti/inventory-hunter) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/ericjmarti/inventory-hunter/latest)
+![Build](https://github.com/EricJMarti/inventory-hunter/workflows/Build/badge.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/ericjmarti/inventory-hunter) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/ericjmarti/inventory-hunter/latest)
 
 ## Requirements
 
