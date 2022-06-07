@@ -1,6 +1,6 @@
 # WhenInStock
 
-![Build](https://github.com/EricJMarti/inventory-hunter/workflows/Build/badge.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/ericjmarti/inventory-hunter) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/ericjmarti/inventory-hunter/latest)
+![Build](https://github.com/JihunB/WhenInStock/workflows/Build/badge.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/ericjmarti/inventory-hunter) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/ericjmarti/inventory-hunter/latest)
 
 ## Requirements
 
@@ -15,17 +15,15 @@ You will also need one of the following:
 
 ## Quick Start
 
-For instructions specific to Windows, please see this guide instead: [Instructions for Windows](https://github.com/EricJMarti/inventory-hunter/wiki/Instructions-for-Windows)
-
-These steps *should* work on any supported Docker platform, but they have been specifically tested on Raspberry Pi OS with Docker already installed.
+Please test on Raspberry Pi OS with Docker already installed.
 
 1. Clone this repository and pull the latest image from [Docker Hub](https://hub.docker.com/r/ericjmarti/inventory-hunter):
     ```
     pi@raspberrypi:~
-    $ git clone https://github.com/EricJMarti/inventory-hunter
+    $ git clone https://github.com/JihunB/WhenInStock
 
     pi@raspberrypi:~
-    $ cd inventory-hunter
+    $ cd WhenInStock
 
     pi@raspberrypi:~/inventory-hunter
     $ docker pull ericjmarti/inventory-hunter:latest
@@ -47,7 +45,7 @@ These steps *should* work on any supported Docker platform, but they have been s
     $ ./docker_run.bash -c <config_file> -a <discord_or_slack> -w <webhook_url>
 
     # Discord example:
-    pi@raspberrypi:~/inventory-hunter
+    pi@raspberrypi:~/WhenInStock
     $ ./docker_run.bash -c ./config/newegg_rtx_3070.yaml -a discord -w https://discord.com/api/webhooks/...
     ```
 
@@ -57,17 +55,17 @@ These steps *should* work on any supported Docker platform, but they have been s
     $ ./docker_run.bash -c <config_file> -e <email_address> -r <relay_ip_address>
 
     # SMTP example:
-    pi@raspberrypi:~/inventory-hunter
+    pi@raspberrypi:~/WhenInStock
     $ ./docker_run.bash -c ./config/newegg_rtx_3070.yaml -e myemail@email.com -r 127.0.0.1
     ```
 
 ## Getting New Code
 
-1. First identify any running container names related to inventory-hunter
+1. First identify any running container names related to WhenInStock
     ```
     $ docker ps
     ```
-2. Stop and remove all containers related to inventory-hunter
+2. Stop and remove all containers related to WhenInStock
     ```
     $ docker stop CONTAINER_NAME
     $ docker rm CONTAINER_NAME
@@ -83,7 +81,7 @@ These steps *should* work on any supported Docker platform, but they have been s
 
 ## Configuring Alerters
 
-If you are interested in configuring multiple alerters or would like to keep your alerter settings saved in a file, you can configure inventory-hunter's alerting mechanism using a config file similar to the existing scraper configs.
+If you are interested in configuring multiple alerters or would like to keep your alerter settings saved in a file, you can configure WhenInStock's alerting mechanism using a config file similar to the existing scraper configs.
 
 1. Create a file called alerters.yaml in the config directory.
 
@@ -118,7 +116,7 @@ If you are interested in configuring multiple alerters or would like to keep you
 3. Add this config file to your run command:
 
     ```
-    pi@raspberrypi:~/inventory-hunter
+    pi@raspberrypi:~/WhenInStock
     $ ./docker_run.bash -c ./config/newegg_rtx_3070.yaml -q ./config/alerters.yaml
     ```
 
@@ -136,10 +134,6 @@ Before developing inventory-hunter, I used several existing services without any
 - you get to choose which products you want to track
 - you are in control of the refresh frequency
 
-### What if inventory-hunter gets used by scalpers?
+### What if WhenInStock gets used by scalpers?
 
 I sure hope this doesn't happen... 2020 and 2021 are bad enough already. My hope is that inventory-hunter levels the playing field a bit by giving real customers a better opportunity than they had previously. Serious scalpers will continue using automated checkout bots, and it is up to online retailers to combat this malarkey.
-
-### Do I really need Docker?
-
-No, but I highly recommend it. If you know your way around python and pip/conda, then you should be able to replicate the environment I created using Docker.
