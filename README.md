@@ -26,7 +26,7 @@ Please test on Raspberry Pi OS with Docker already installed.
     $ cd WhenInStock
 
     pi@raspberrypi:~/inventory-hunter
-    $ docker pull ericjmarti/inventory-hunter:latest
+    $ sudo docker pull ericjmarti/inventory-hunter:latest
     ```
 
 2. Create your own configuration file based on one of the provided examples:
