@@ -149,11 +149,11 @@ If you are interested in configuring multiple alerters or would like to keep you
 
 ## Presentation Video (YouTube) Link
 
-https://youtu.be/2vE4boTr7eA
+https://youtu.be/2vE4boTr7eA  
 
 ## References
 
-https://github.com/EricJMarti/inventory-hunter
+https://github.com/EricJMarti/inventory-hunter  
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 ## Where can I get more help, if needed?
