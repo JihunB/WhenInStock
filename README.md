@@ -36,7 +36,7 @@ Please test on Raspberry Pi OS with Docker already installed.
     pi@raspberrypi:~
     $ cd WhenInStock
 
-    pi@raspberrypi:~/inventory-hunter
+    pi@raspberrypi:~/WhenInStock
     $ sudo docker pull ericjmarti/inventory-hunter:latest
     ```
 
